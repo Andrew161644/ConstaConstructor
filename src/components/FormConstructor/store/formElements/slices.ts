@@ -9,7 +9,7 @@ import { AddNewFormElementPayload } from './payload'
 
 const initialState: IFormConstructor = {
   allElementsMap: new Map<string, (ILayoutElement | IFormElement)[]>(),
-  selectedFormElement: '',
+  selectedElementId: '',
 }
 
 const createFormConstructorSlice = <Reducers extends SliceCaseReducers<IFormConstructor>>({
@@ -33,10 +33,12 @@ export const formConstructorSlice = createFormConstructorSlice({
   initialState,
   reducers: {
     addNewElement: (state, action: PayloadAction<AddNewFormElementPayload>) => {
-      state.allElementsMap.set(action.payload.parent, [
+      const map = state.allElementsMap
+      map.set(action.payload.parent, [
         ...(state.allElementsMap.get(action.payload.parent) || []),
         action.payload.element,
       ])
+      state.allElementsMap = new Map<string, (ILayoutElement | IFormElement)[]>(map)
     },
   },
 })

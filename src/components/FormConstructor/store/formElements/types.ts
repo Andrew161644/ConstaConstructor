@@ -22,5 +22,5 @@ export interface IFormElement {
 
 export interface IFormConstructor {
   allElementsMap: Map<string, (ILayoutElement | IFormElement)[]>
-  selectedFormElement: string
+  selectedElementId: string
 }

@@ -32,7 +32,7 @@ export const DroppableLayer: FC<IDroppableLayer> = ({ parentElementId }) => {
     console.log(parentElementId)
     event.stopPropagation()
     event.preventDefault()
-    
+
     if (elemType) {
       const layoutElement: ILayoutElement = {
         id: uuid(),

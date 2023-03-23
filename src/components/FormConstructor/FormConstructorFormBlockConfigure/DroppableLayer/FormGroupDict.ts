@@ -18,9 +18,11 @@ import {
   CustomCards,
   LayoutFormElement,
 } from '../Elements'
+import { GridFormElement } from '../Elements/GridFormElement'
 
 export const FormGroupsDict: Record<FormGroupsTypes | FormElementTypes, FC<any>> = {
   Layout: LayoutFormElement,
+  Grid: GridFormElement,
   Button: ButtonFormElement,
   Badge: BadgeFormElement,
   Card: CardFormElement,

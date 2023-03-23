@@ -22,6 +22,13 @@ import {
 import { IFormElementTextField, TextFieldProps } from './textFieldTypes'
 
 import { IFormElementBadge, BadgeProps } from './badgeTypes'
+import {
+  DefaultGridProp,
+  IGridElement,
+  ElementGridMeasurementTypes,
+  IGridProp,
+  IGridPropParam,
+} from './gridTypes'
 
 import { LayoutElementProps, LayoutElementPropsStyles, LayoutElementStyles } from './layoutTypes'
 
@@ -53,6 +60,11 @@ export {
   FormElementTypes,
   FormGroupsTypes,
   ElementTypes,
+  DefaultGridProp,
+  type ElementGridMeasurementTypes,
+  type IGridPropParam,
+  type IGridProp,
+  type IGridElement,
   type IFormElementTextField,
   type TextFieldProps,
   type ICardElement,

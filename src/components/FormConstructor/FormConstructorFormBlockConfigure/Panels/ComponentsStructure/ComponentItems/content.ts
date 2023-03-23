@@ -9,13 +9,18 @@ export const constaCards = [
   },
   {
     id: uuid(),
-    name: 'Кнопка',
-    formElementType: FormElementTypes.Button,
+    name: 'Grid',
+    formElementType: FormGroupsTypes.Grid,
   },
   {
     id: uuid(),
     name: 'Карточка',
     groupElementType: FormGroupsTypes.Card,
+  },
+  {
+    id: uuid(),
+    name: 'Кнопка',
+    formElementType: FormElementTypes.Button,
   },
   {
     id: uuid(),

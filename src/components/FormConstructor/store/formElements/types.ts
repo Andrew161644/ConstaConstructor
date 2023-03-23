@@ -9,6 +9,7 @@ import { CheckboxProps, IFormElementCheckbox } from './checkboxTypes'
 import { TextElementProps, IFormElementText } from './textTypes'
 import { IFormElementTextField, TextFieldProps } from './textFieldTypes'
 import { Values } from '../../utils'
+import { IGridElement, IGridProp } from './gridTypes'
 
 export type ButtonElementProps = Props & BaseProps
 
@@ -26,6 +27,7 @@ export type ElementTypes = Values<typeof ElementTypes>
 export const FormGroupsTypes = {
   Layout: 'Layout',
   Card: 'Card',
+  Grid: 'Grid',
 } as const
 
 // eslint-disable-next-line @typescript-eslint/no-redeclare
@@ -92,7 +94,7 @@ export type FormElementProps =
   | TextFieldProps
 
 // Все Union пропсы для GroupElement
-export type GroupElementProps = LayoutElementPropsStyles | CardElementPropsStyles
+export type GroupElementProps = LayoutElementPropsStyles | CardElementPropsStyles | IGridProp
 
 // По мере добавление новых обычных элементов формы сюда будем добавлять новые объединения
 export type FormElementUnion =
@@ -104,10 +106,10 @@ export type FormElementUnion =
   | IFormElementTabs
   | IFormElementTextField
 
-// По мере добавление новых группирующих элементов сюда будем добавлять новые объединения
-export type GroupElementUnion = ILayoutElement | ICardElement
+// По мере добавление новых группирующих элементов сюда сожно добавлять новые объединения
+export type GroupElementUnion = ILayoutElement | ICardElement | IGridElement
 
-/// По мере расширения сюда подем дописывать новые объединения
+/// По мере расширения сюда можно дописывать новые объединения
 export type UnionProps = FormElementProps | GroupElementProps
 
 export interface BaseProps {

@@ -92,7 +92,6 @@ export const BaseComponents: FC = () => {
         if (elem) {
           elementsList.push(elem)
           childrenElemsIds = allElementsTree.get(elem.id) || []
-          // childrenComponentsTree.set(elem.id, childrenElemsIds)
           childrenElemsIds.forEach(childId => {
             childParentMap.set(childId, elem.id)
           })
